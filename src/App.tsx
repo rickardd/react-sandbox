@@ -3,6 +3,7 @@ import { FormOne } from "./components/FormOne";
 import { FormTwo } from "./components/FormTwo";
 import { FormThree } from "./components/FormThree";
 import { Signal } from "./components/Counter";
+import FormWithZod from "./components/FormWithZod";
 
 const App = () => {
   return (
@@ -21,6 +22,9 @@ const App = () => {
           <li>
             <Link to="/signal">Signal</Link>
           </li>
+          <li>
+            <Link to="/zod">Zod</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -28,6 +32,7 @@ const App = () => {
         <Route path="/f2" element={<FormTwo />} />
         <Route path="/f3" element={<FormThree />} />
         <Route path="/signal" element={<Signal />} />
+        <Route path="/zod" element={<FormWithZod />} />
       </Routes>
     </>
   );
