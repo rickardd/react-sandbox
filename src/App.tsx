@@ -1,18 +1,31 @@
-import { useState } from "react";
-import "./App.css";
+import { Link, Route, Routes } from "react-router-dom";
+import { FormOne } from "./components/FormOne";
+import { FormTwo } from "./components/FormTwo";
+import { FormThree } from "./components/FormThree";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Form One</Link>
+          </li>
+          <li>
+            <Link to="/f2">Form Two</Link>
+          </li>
+          <li>
+            <Link to="/f3">Form Three</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<FormOne />} />
+        <Route path="/f2" element={<FormTwo />} />
+        <Route path="/f3" element={<FormThree />} />
+      </Routes>
     </>
   );
-}
+};
 
 export default App;
