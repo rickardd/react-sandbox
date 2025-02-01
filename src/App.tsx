@@ -6,6 +6,9 @@ import { Signal } from "./components/Counter";
 import FormWithZod from "./components/FormWithZod";
 import { PostList } from "./components/PostList";
 import Products from "./pages/products/Products";
+import Artists from "./pages/artists/Artists";
+import SearchBar from "./pages/artists/components/SearchBar";
+import ArtistList from "./pages/artists/components/ArtistList";
 
 const App = () => {
   return (
@@ -33,6 +36,9 @@ const App = () => {
           <li>
             <Link to="/products">Products</Link>
           </li>
+          <li>
+            <Link to="/artists">Artists</Link>
+          </li>
         </ul>
       </nav>
 
@@ -44,6 +50,10 @@ const App = () => {
         <Route path="/zod" element={<FormWithZod />} />
         <Route path="/react-query" element={<PostList />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/artists" element={<Artists />}>
+          <Route path="" element={<SearchBar />} />
+          <Route path="primary-artists" element={<ArtistList />} />
+        </Route>
       </Routes>
     </>
   );

@@ -1,0 +1,165 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* Great scss loop case */
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mt-24 {
+  margin-top: 12px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mb-24 {
+  margin-bottom: 12px;
+}
+
+.flex {
+  display: flex;
+}
+.justify-end {
+  justify-content: end;
+}
+
+.test-xs {
+  font-size: 12px;
+}
+.test-s {
+  font-size: 16px;
+}
+.test-m {
+}
+
+.test-l {
+  font-size: 24px;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: start;
+}
+
+.button {
+  background-color: #35edc4;
+  color: blue;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: #0101a4;
+}
+
+.item-button {
+  background-color: transparent;
+  color: #0101a4;
+  border-radius: 14px;
+  padding: 6px 15px;
+  cursor: pointer;
+  font-size: 12px;
+  border: 1px solid #a7a7a7;
+  white-space: nowrap;
+}
+
+.item-button:hover {
+  background-color: #36edc4;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: green;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
+
+.card {
+  background-color: #eaf1fb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.card h1,
+.card h2,
+.card h3 {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0 0 16px;
+}
+
+.card p {
+  font-family: Arial, sans-serif;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.item-card {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.item-card .item-info {
+  flex: 1;
+}
+
+.item-card .item-info a {
+  color: blue;
+  text-decoration: none;
+}
+
+.item-card .item-info a:hover {
+  text-decoration: underline;
+}
+
+.popularity-sort {
+  display: inline-flex;
+  gap: 12px;
+  margin-top: 24px;
+}
