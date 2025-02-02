@@ -10,6 +10,8 @@ import Artists from "./pages/artists/Artists";
 import SearchBar from "./pages/artists/components/SearchBar";
 import ArtistList from "./pages/artists/components/ArtistList";
 import { SideEffects } from "./components/SideEffects";
+import { MyRoutes } from "./components/MyRoutes";
+import { MemoComponent } from "./components/MemoComponent";
 
 const App = () => {
   return (
@@ -31,6 +33,13 @@ const App = () => {
           <li>
             <Link to="/use-effects">useEffects</Link>
           </li>
+          {/* <li>
+            ToDo 
+            <Link to="/react-memo">useMemo</Link>
+          </li> */}
+          <li>
+            <Link to="/react-memo">memo</Link>
+          </li>
           <li>
             <Link to="/zod">Zod</Link>
           </li>
@@ -43,6 +52,9 @@ const App = () => {
           <li>
             <Link to="/artists">Artists</Link>
           </li>
+          <li>
+            <Link to="/nested-routes">Nested routes</Link>
+          </li>
         </ul>
       </nav>
 
@@ -52,6 +64,7 @@ const App = () => {
         <Route path="/f3" element={<FormThree />} />
         <Route path="/signal" element={<Signal />} />
         <Route path="/use-effects" element={<SideEffects />} />
+        <Route path="/use-memo" element={<MemoComponent />} />
         <Route path="/zod" element={<FormWithZod />} />
         <Route path="/react-query" element={<PostList />} />
         <Route path="/products" element={<Products />} />
@@ -59,6 +72,8 @@ const App = () => {
           <Route path="" element={<SearchBar />} />
           <Route path="primary-artists" element={<ArtistList />} />
         </Route>
+        <Route path="nested-routes/*" element={<MyRoutes />} />
+        <Route path="*" element={<p>Not found</p>} />
       </Routes>
     </>
   );
