@@ -17,6 +17,34 @@ npm install -D @testing-library/jest-dom
 npm install -D @testing-library/user-event
 npm install -D cypress
 
+## ToDo
+
+- Useref vs useMemo
+- HOC
+- Always ensure a shortcut returns a bool
+- Milion lint (vscode plugin)?
+- The use hook
+
+# Interview comments on artist component
+
+- Interview comments
+- React query cashing
+- Aborting earlier request
+- Disable button on no search
+- Router context
+- Loosly coupledncomponent with store
+- Solid
+- Css approach
+- Debugging pros and cons with store
+- Performance - no extra rendering
+- Keep state logic on one place with store
+- No ts
+- React form
+- How to handle multiple stores
+- How to handle nested routs
+- Solid
+- Controlled vs uncontrolled form
+
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 

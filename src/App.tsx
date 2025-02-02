@@ -12,6 +12,7 @@ import ArtistList from "./pages/artists/components/ArtistList";
 import { SideEffects } from "./components/SideEffects";
 import { MyRoutes } from "./components/MyRoutes";
 import { MemoComponent } from "./components/MemoComponent";
+import { PassingData } from "./components/PassingData";
 
 const App = () => {
   return (
@@ -55,6 +56,9 @@ const App = () => {
           <li>
             <Link to="/nested-routes">Nested routes</Link>
           </li>
+          <li>
+            <Link to="/passing-data">Passing data between components</Link>
+          </li>
         </ul>
       </nav>
 
@@ -72,7 +76,8 @@ const App = () => {
           <Route path="" element={<SearchBar />} />
           <Route path="primary-artists" element={<ArtistList />} />
         </Route>
-        <Route path="nested-routes/*" element={<MyRoutes />} />
+        <Route path="/nested-routes/*" element={<MyRoutes />} />
+        <Route path="passing-data" element={<PassingData />} />
         <Route path="*" element={<p>Not found</p>} />
       </Routes>
     </>
