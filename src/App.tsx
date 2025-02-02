@@ -9,6 +9,7 @@ import Products from "./pages/products/Products";
 import Artists from "./pages/artists/Artists";
 import SearchBar from "./pages/artists/components/SearchBar";
 import ArtistList from "./pages/artists/components/ArtistList";
+import { SideEffects } from "./components/SideEffects";
 
 const App = () => {
   return (
@@ -26,6 +27,9 @@ const App = () => {
           </li>
           <li>
             <Link to="/signal">Signal</Link>
+          </li>
+          <li>
+            <Link to="/use-effects">useEffects</Link>
           </li>
           <li>
             <Link to="/zod">Zod</Link>
@@ -47,6 +51,7 @@ const App = () => {
         <Route path="/f2" element={<FormTwo />} />
         <Route path="/f3" element={<FormThree />} />
         <Route path="/signal" element={<Signal />} />
+        <Route path="/use-effects" element={<SideEffects />} />
         <Route path="/zod" element={<FormWithZod />} />
         <Route path="/react-query" element={<PostList />} />
         <Route path="/products" element={<Products />} />
