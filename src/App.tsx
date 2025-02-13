@@ -14,6 +14,7 @@ import { MyRoutes } from "./components/MyRoutes";
 import { MemoComponent } from "./components/MemoComponent";
 import { PassingData } from "./components/PassingData";
 import { Context } from "./components/Context";
+import { MemoAndCallbackHooks } from "./components/MemoAndCallbackHooks";
 
 const App = () => {
   return (
@@ -35,10 +36,9 @@ const App = () => {
           <li>
             <Link to="/use-effects">useEffects</Link>
           </li>
-          {/* <li>
-            ToDo 
-            <Link to="/react-memo">useMemo</Link>
-          </li> */}
+          <li>
+            <Link to="/react-useMemo-useCallback">useMemo and useCallback</Link>
+          </li>
           <li>
             <Link to="/react-memo">memo</Link>
           </li>
@@ -73,6 +73,7 @@ const App = () => {
         <Route path="/signal" element={<Signal />} />
         <Route path="/use-effects" element={<SideEffects />} />
         <Route path="/use-memo" element={<MemoComponent />} />
+        <Route path="/react-useMemo-useCallback" element={<MemoAndCallbackHooks />} />
         <Route path="/use-context" element={<Context />} />
         <Route path="/zod" element={<FormWithZod />} />
         <Route path="/react-query" element={<PostList />} />
