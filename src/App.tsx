@@ -16,6 +16,7 @@ import { PassingData } from "./components/PassingData";
 import { Context } from "./components/Context";
 import { MemoAndCallbackHooks } from "./components/MemoAndCallbackHooks";
 import "./App.scss";
+import { StyledComponent } from "./components/StyledComponent";
 
 const App = () => {
   return (
@@ -64,6 +65,9 @@ const App = () => {
           <li>
             <Link to="/passing-data">Passing data between components</Link>
           </li>
+          <li>
+            <Link to="/styled-component">Styled component</Link>
+          </li>
         </ul>
       </nav>
 
@@ -85,6 +89,7 @@ const App = () => {
         </Route>
         <Route path="/nested-routes/*" element={<MyRoutes />} />
         <Route path="passing-data" element={<PassingData />} />
+        <Route path="styled-component" element={<StyledComponent />} />
         <Route path="*" element={<p>Not found</p>} />
       </Routes>
     </>
