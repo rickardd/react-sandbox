@@ -18,6 +18,8 @@ import { MemoAndCallbackHooks } from "./components/MemoAndCallbackHooks";
 import "./App.scss";
 import { StyledComponent } from "./components/StyledComponent";
 import { Mui } from "./components/Mui";
+import { Emotion } from "./components/Emotion";
+import { CssModules } from "./components/css-moduels/CssModules";
 
 const App = () => {
   return (
@@ -72,6 +74,12 @@ const App = () => {
           <li>
             <Link to="/mui">MUI</Link>
           </li>
+          <li>
+            <Link to="/emotion">Emotion</Link>
+          </li>
+          <li>
+            <Link to="/css-modules">CSS modules</Link>
+          </li>
         </ul>
       </nav>
 
@@ -95,6 +103,8 @@ const App = () => {
         <Route path="passing-data" element={<PassingData />} />
         <Route path="styled-component" element={<StyledComponent />} />
         <Route path="mui" element={<Mui />} />
+        <Route path="emotion" element={<Emotion />} />
+        <Route path="css-modules" element={<CssModules />} />
         <Route path="*" element={<p>Not found</p>} />
       </Routes>
     </>

@@ -1,0 +1,29 @@
+/* src/Button.module.css */
+.button {
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* CSS Modules do not support nested selectors. We have to go with flat structure */
+/* .button .red {
+  background-color: red;
+} */
+
+.button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+.red {
+  background-color: red;
+}
+
+.disabled {
+  background-color: #ccc; /* Gray */
+  cursor: not-allowed;
+}
