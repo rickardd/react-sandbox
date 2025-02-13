@@ -13,6 +13,7 @@ import { SideEffects } from "./components/SideEffects";
 import { MyRoutes } from "./components/MyRoutes";
 import { MemoComponent } from "./components/MemoComponent";
 import { PassingData } from "./components/PassingData";
+import { Context } from "./components/Context";
 
 const App = () => {
   return (
@@ -42,6 +43,9 @@ const App = () => {
             <Link to="/react-memo">memo</Link>
           </li>
           <li>
+            <Link to="/use-context">useContext</Link>
+          </li>
+          <li>
             <Link to="/zod">Zod</Link>
           </li>
           <li>
@@ -69,6 +73,7 @@ const App = () => {
         <Route path="/signal" element={<Signal />} />
         <Route path="/use-effects" element={<SideEffects />} />
         <Route path="/use-memo" element={<MemoComponent />} />
+        <Route path="/use-context" element={<Context />} />
         <Route path="/zod" element={<FormWithZod />} />
         <Route path="/react-query" element={<PostList />} />
         <Route path="/products" element={<Products />} />
