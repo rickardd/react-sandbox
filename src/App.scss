@@ -1,0 +1,35 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #f8f9fa; /* Optional: background color for the nav */
+  margin-bottom: 24px;
+
+  & ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 4px;
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+
+  & a {
+    text-decoration: none; /* Remove underline from links */
+    padding: 4px 6px; /* Add padding for clickable area */
+    background-color: #007bff; /* Optional: background color for links */
+    color: white; /* Text color */
+    border-radius: 4px; /* Optional: rounded corners */
+    transition: background-color 0.3s; /* Optional: smooth transition for hover effect */
+    display: block;
+    font-size: 12px;
+
+    &:hover {
+      background-color: #0056b3; /* Optional: darker background on hover */
+    }
+  }
+}

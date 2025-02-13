@@ -15,7 +15,7 @@ import { MemoComponent } from "./components/MemoComponent";
 import { PassingData } from "./components/PassingData";
 import { Context } from "./components/Context";
 import { MemoAndCallbackHooks } from "./components/MemoAndCallbackHooks";
-import "./App.css";
+import "./App.scss";
 
 const App = () => {
   return (
