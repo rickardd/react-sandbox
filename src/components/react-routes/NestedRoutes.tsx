@@ -1,6 +1,6 @@
 import { Routes, Route, Link, Outlet, useParams, useLocation } from "react-router-dom";
 
-export const MyRoutes = () => {
+export const NestedRoutes = () => {
   return (
     <div>
       <p>!!!(Issue, the url string just adds up. Find the proper way to render child routes)</p>
@@ -23,6 +23,7 @@ export const MyRoutes = () => {
       <Outlet />
 
       <Routes>
+        <Route index element={<p>This is the index route</p>} />
         <Route path="overview/:id" element={<Overview />} />
         <Route path="settings" element={<Settings />} />
         <Route path="profile" element={<Profile data={{ info: "Passed along component prop data" }} />} />
@@ -38,12 +39,14 @@ const Overview = () => {
 
   return <p>Param ID: {id}</p>;
 };
+
 const Settings = () => {
   const query = new URLSearchParams(useLocation().search);
   const theme = query.get("theme"); // Get the query parameter
 
   return <p>Settings Page - Theme: {theme}</p>;
 };
+
 const Profile = ({ data }) => {
   return <p>{data.info}</p>;
 };

@@ -1,7 +1,6 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 
-export const FormOne = () => {
+export const ReactForm = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
@@ -10,7 +9,7 @@ export const FormOne = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h2>Form One</h2>
+      <h2>React Form</h2>
       <input {...register("field1")} placeholder="Field 1" />
       <button type="submit">Submit</button>
     </form>

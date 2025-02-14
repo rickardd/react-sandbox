@@ -1,7 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
-import { FormOne } from "./components/FormOne";
-import { FormTwo } from "./components/FormTwo";
-import { FormThree } from "./components/FormThree";
+import { NavLink, Route, Routes } from "react-router-dom";
 import { Signal } from "./components/Counter";
 import FormWithZod from "./components/FormWithZod";
 import { PostList } from "./components/PostList";
@@ -10,103 +7,121 @@ import Artists from "./pages/artists/Artists";
 import SearchBar from "./pages/artists/components/SearchBar";
 import ArtistList from "./pages/artists/components/ArtistList";
 import { SideEffects } from "./components/SideEffects";
-import { MyRoutes } from "./components/MyRoutes";
 import { MemoComponent } from "./components/MemoComponent";
 import { PassingData } from "./components/PassingData";
 import { Context } from "./components/Context";
 import { MemoAndCallbackHooks } from "./components/MemoAndCallbackHooks";
-import "./App.scss";
 import { StyledComponent } from "./components/StyledComponent";
 import { Mui } from "./components/Mui";
 import { Emotion } from "./components/Emotion";
 import { CssModules } from "./components/css-moduels/CssModules";
+import { ReactFormNav } from "./components/react-form/ReactFormNav";
+import { ReactFormRoutes } from "./components/react-form/ReactFromRoutes";
+import { ReactRouterNav } from "./components/react-routes/ReactRoutesNav";
+import { ReactRouterRoutes } from "./components/react-routes/ReactRoutesRoutes";
+import "./App.scss";
+import "./layout.scss";
 
 const App = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Form One</Link>
-          </li>
-          <li>
-            <Link to="/f2">Form Two</Link>
-          </li>
-          <li>
-            <Link to="/f3">Form Three</Link>
-          </li>
-          <li>
-            <Link to="/signal">Signal</Link>
-          </li>
-          <li>
-            <Link to="/use-effects">useEffects</Link>
-          </li>
-          <li>
-            <Link to="/react-useMemo-useCallback">useMemo and useCallback</Link>
-          </li>
-          <li>
-            <Link to="/react-memo">memo</Link>
-          </li>
-          <li>
-            <Link to="/use-context">useContext</Link>
-          </li>
-          <li>
-            <Link to="/zod">Zod</Link>
-          </li>
-          <li>
-            <Link to="/react-query">React Query</Link>
-          </li>
-          <li>
-            <Link to="/products">Products</Link>
-          </li>
-          <li>
-            <Link to="/artists">Artists</Link>
-          </li>
-          <li>
-            <Link to="/nested-routes">Nested routes</Link>
-          </li>
-          <li>
-            <Link to="/passing-data">Passing data between components</Link>
-          </li>
-          <li>
-            <Link to="/styled-component">Styled component</Link>
-          </li>
-          <li>
-            <Link to="/mui">MUI</Link>
-          </li>
-          <li>
-            <Link to="/emotion">Emotion</Link>
-          </li>
-          <li>
-            <Link to="/css-modules">CSS modules</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<FormOne />} />
-        <Route path="/f2" element={<FormTwo />} />
-        <Route path="/f3" element={<FormThree />} />
-        <Route path="/signal" element={<Signal />} />
-        <Route path="/use-effects" element={<SideEffects />} />
-        <Route path="/use-memo" element={<MemoComponent />} />
-        <Route path="/react-useMemo-useCallback" element={<MemoAndCallbackHooks />} />
-        <Route path="/use-context" element={<Context />} />
-        <Route path="/zod" element={<FormWithZod />} />
-        <Route path="/react-query" element={<PostList />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/artists" element={<Artists />}>
-          <Route path="" element={<SearchBar />} />
-          <Route path="primary-artists" element={<ArtistList />} />
-        </Route>
-        <Route path="/nested-routes/*" element={<MyRoutes />} />
-        <Route path="passing-data" element={<PassingData />} />
-        <Route path="styled-component" element={<StyledComponent />} />
-        <Route path="mui" element={<Mui />} />
-        <Route path="emotion" element={<Emotion />} />
-        <Route path="css-modules" element={<CssModules />} />
-        <Route path="*" element={<p>Not found</p>} />
-      </Routes>
+      <div className="container">
+        <header className="header">
+          <nav>
+            <ul>
+              <li>
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/react-router">React Router</NavLink>
+              </li>
+              <li>
+                <NavLink to="/react-form">ReactForm</NavLink>
+              </li>
+              <li>
+                <NavLink to="/signal">Signal</NavLink>
+              </li>
+              <li>
+                <NavLink to="/use-effects">useEffects</NavLink>
+              </li>
+              <li>
+                <NavLink to="/react-useMemo-useCallback">useMemo and useCallback</NavLink>
+              </li>
+              <li>
+                <NavLink to="/react-memo">memo</NavLink>
+              </li>
+              <li>
+                <NavLink to="/use-context">useContext</NavLink>
+              </li>
+              <li>
+                <NavLink to="/zod">Zod</NavLink>
+              </li>
+              <li>
+                <NavLink to="/react-query">React Query</NavLink>
+              </li>
+              <li>
+                <NavLink to="/products">Products</NavLink>
+              </li>
+              <li>
+                <NavLink to="/artists">Artists</NavLink>
+              </li>
+              <li>
+                <NavLink to="/passing-data">Passing data between components</NavLink>
+              </li>
+              <li>
+                <NavLink to="/styled-component">Styled component</NavLink>
+              </li>
+              <li>
+                <NavLink to="/mui">MUI</NavLink>
+              </li>
+              <li>
+                <NavLink to="/emotion">Emotion</NavLink>
+              </li>
+              <li>
+                <NavLink to="/css-modules">CSS modules</NavLink>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <nav className="sidebar">
+          <Routes>
+            <Route path="/" element={<p>This is the root path</p>} />
+            <Route path="/react-form/*" element={<ReactFormNav />} />
+            <Route path="/react-router/*" element={<ReactRouterNav />}>
+              <Route path="test1" element={<p>Test 1</p>} />
+              <Route path="test2" element={<p>Test 2</p>} />
+            </Route>
+            <Route path="*" element={<p>Not found</p>} />
+          </Routes>
+        </nav>
+        <main className="content">
+          <Routes>
+            <Route path="/" element={<p>This is the root path</p>} />
+            <Route path="/react-router/*" element={<ReactRouterRoutes />} />
+            <Route path="/react-form/*" element={<ReactFormRoutes />}>
+              {/* <Route path="*" element={<ReactFormRoutes />} /> */}
+            </Route>
+            <Route path="/signal" element={<Signal />} />
+            <Route path="/use-effects" element={<SideEffects />} />
+            <Route path="/use-memo" element={<MemoComponent />} />
+            <Route path="/react-useMemo-useCallback" element={<MemoAndCallbackHooks />} />
+            <Route path="/use-context" element={<Context />} />
+            <Route path="/zod" element={<FormWithZod />} />
+            <Route path="/react-query" element={<PostList />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/artists" element={<Artists />}>
+              <Route path="" element={<SearchBar />} />
+              <Route path="primary-artists" element={<ArtistList />} />
+            </Route>
+            <Route path="passing-data" element={<PassingData />} />
+            <Route path="styled-component" element={<StyledComponent />} />
+            <Route path="mui" element={<Mui />} />
+            <Route path="emotion" element={<Emotion />} />
+            <Route path="css-modules" element={<CssModules />} />
+            <Route path="*" element={<p>Not found</p>} />
+          </Routes>
+        </main>
+      </div>
     </>
   );
 };
