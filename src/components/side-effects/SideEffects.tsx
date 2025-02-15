@@ -147,33 +147,6 @@ export const SideEffects = ({ foo = true }) => {
 
   return (
     <div>
-      <h3>Good to know</h3>
-
-      <p>All useEffects will always run once (with or without a dependency) after the component has rendered</p>
-
-      <p>
-        The return statement runs <br /> - Before the Component Unmounts <br /> - Before the effect runs again because a dependency has change.
-      </p>
-      <p>Api calls should live in useEffects</p>
-      <p>State updates in useEffect are asynchronous. Use the functional form of the state setter (e.g., setState(prev =&gt; newValue)) to get current state.</p>
-
-      <p>
-        Consider using AbortController to cancel ongoing requests when the component unmounts or when the effect re-runs. This helps prevent memory leaks and state updates on unmounted components.
-      </p>
-
-      <p>
-        React Strict Mode: <strong>Be aware that in React's Strict Mode</strong> , effects may run twice in development to help identify side effects. This does not happen in production.
-      </p>
-
-      <br />
-      <br />
-
-      <h3>Things to Watch Out For</h3>
-      <p>Stale Closures: Be cautious of stale closures when using state or props inside the effect. If you reference them directly, they may not reflect the latest values.</p>
-      <p>Unnecessary Re-renders: Avoid including functions or objects in the dependency array unless they are memoized, as this can lead to unnecessary re-renders.</p>
-      <p>Race Conditions: When dealing with asynchronous operations, be aware of race conditions where the order of operations may lead to unexpected results.</p>
-      <p>Component Unmounting: Always ensure that your cleanup logic is robust to handle cases where the component may unmount before an effect completes.</p>
-
       <button onClick={increment}>Increment</button>
       <button onClick={() => setUserId((prevUserId) => prevUserId + 1)}>Get next user</button>
     </div>

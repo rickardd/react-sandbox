@@ -6,7 +6,7 @@ import Products from "./pages/products/Products";
 import Artists from "./pages/artists/Artists";
 import SearchBar from "./pages/artists/components/SearchBar";
 import ArtistList from "./pages/artists/components/ArtistList";
-import { SideEffects } from "./components/SideEffects";
+import { SideEffects } from "./components/side-effects/SideEffects";
 import { MemoComponent } from "./components/MemoComponent";
 import { PassingData } from "./components/PassingData";
 import { Context } from "./components/Context";
@@ -21,6 +21,8 @@ import { ReactRouterNav } from "./components/react-routes/ReactRoutesNav";
 import { ReactRouterRoutes } from "./components/react-routes/ReactRoutesRoutes";
 import "./App.scss";
 import "./layout.scss";
+import { SideEffectsRoutes } from "./components/side-effects/SideEffectsRoutes";
+import { SideEffectsNav } from "./components/side-effects/SideEffectsNav";
 
 const App = () => {
   return (
@@ -87,6 +89,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<p>This is the root path</p>} />
             <Route path="/react-form/*" element={<ReactFormNav />} />
+            <Route path="/use-effects/*" element={<SideEffectsNav />} />
             <Route path="/react-router/*" element={<ReactRouterNav />}>
               <Route path="test1" element={<p>Test 1</p>} />
               <Route path="test2" element={<p>Test 2</p>} />
@@ -97,12 +100,12 @@ const App = () => {
         <main className="content">
           <Routes>
             <Route path="/" element={<p>This is the root path</p>} />
+            <Route path="/use-effects/*" element={<SideEffectsRoutes />} />
             <Route path="/react-router/*" element={<ReactRouterRoutes />} />
             <Route path="/react-form/*" element={<ReactFormRoutes />}>
               {/* <Route path="*" element={<ReactFormRoutes />} /> */}
             </Route>
             <Route path="/signal" element={<Signal />} />
-            <Route path="/use-effects" element={<SideEffects />} />
             <Route path="/use-memo" element={<MemoComponent />} />
             <Route path="/react-useMemo-useCallback" element={<MemoAndCallbackHooks />} />
             <Route path="/use-context" element={<Context />} />
