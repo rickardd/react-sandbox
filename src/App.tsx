@@ -82,6 +82,9 @@ const App = () => {
               <li>
                 <NavLink to="/css-modules">CSS modules</NavLink>
               </li>
+              <li>
+                <NavLink to="/">Docker</NavLink>
+              </li>
             </ul>
           </nav>
         </header>
@@ -109,7 +112,7 @@ const App = () => {
             <Route path="/use-memo" element={<MemoComponent />} />
             <Route path="/react-useMemo-useCallback" element={<MemoAndCallbackHooks />} />
             <Route path="/use-context" element={<Context />} />
-            <Route path="/zod" element={<FormWithZod />} />
+            <Route path="/zod" element={<p>Zod</p>} />
             <Route path="/react-query" element={<PostList />} />
             <Route path="/products" element={<Products />} />
             <Route path="/artists" element={<Artists />}>

@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export const ReactForm = () => {
+export const SimpleForm = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
