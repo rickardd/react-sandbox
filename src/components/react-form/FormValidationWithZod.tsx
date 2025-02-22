@@ -49,4 +49,7 @@ const markdownContent = `
 - npm install @hookform/resolvers
 - the schema can be inferred and used in ts - type FormData = z.infer<typeof schema>;
 - Keeps validation rules separate which helps for a cleaner markup and better readability.
+- Inject zod-schema into the resolver
+
+The resolver is a function that integrates external validation libraries with React Hook Form's validation mechanism. It allows you to use custom validation schemas (like those from libraries such as Zod, Yup, Joi, etc.) to validate form data seamlessly.
 `;
