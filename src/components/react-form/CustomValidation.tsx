@@ -55,6 +55,22 @@ export const CustomValidation = () => {
 };
 
 const markdownContent = `
+
+### Key Points. 
+- Register take a validation object as second parameter. register("foo", validation)
+- Use the **pattern** property for custom validation e.g
+
+e.g
+\`\`\`
+...register("email", {
+  required: "Email is required",
+  pattern: {
+    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    message: "Invalid email format",
+  },
+})
+\`\`\`
+
 - Add html attribute novalidate to <form novalidate> to prevent browser validation
 - register takes two arguments name and validation-object. registar(name, validation)
 - The validation object has the property pattern in which we can write regular expressions for e.g email and phone numbers
