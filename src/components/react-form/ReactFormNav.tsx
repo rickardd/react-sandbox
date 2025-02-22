@@ -24,23 +24,21 @@ export const ReactFormNav = () => {
             <NavLink to="/react-form/dynamic-form-fields">Dynamic Form Fields</NavLink>
           </li>
           <li>
-            <NavLink to="">ToDo: Conditional Validation</NavLink>
+            <NavLink to="/react-form/conditional-validation">ToDo: Conditional Validation</NavLink>
           </li>
           <li>
-            <NavLink to="">ToDo: Integration with UI Libraries</NavLink>
+            <NavLink to="/react-form/ui-library-integration">ToDo: Integration with UI Libraries</NavLink>
           </li>
           <li>
-            <NavLink to="">ToDo: Revalidation:</NavLink>
+            <NavLink to="/react-form/revalidation">ToDo: Revalidation:</NavLink>
           </li>
           <li>
-            <NavLink to="">ToDo: Default Values</NavLink>
+            <NavLink to="/react-form/default-values">ToDo: Default Values</NavLink>
           </li>
           <li>
-            <NavLink to="">ToDo: Field Arrays</NavLink>
+            <NavLink to="/react-form/asynchronous-validation">ToDo: Asynchronous Validation</NavLink>
           </li>
-          <li>
-            <NavLink to="">ToDo: Asynchronous Validation</NavLink>
-          </li>
+
           <Outlet />
         </ul>
       </nav>
