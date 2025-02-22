@@ -41,6 +41,21 @@ export const FormValidation = () => {
 };
 
 const markdownContent = `
+
+### Key Points. 
+Register take a validation object as second parameter. register("foo", validation)
+
+e.g
+\`\`\`
+{...register("password", {
+  required: "Password is required",
+  minLength: {
+    value: 6,
+    message: "Password must be at least 6 characters long",
+  },
+})}
+\`\`\`
+
 **Mode triggers** - useForm({ mode: "onBlur" })
 - **onBlur**: Set validation to trigger on blur
 - **onChange** : real-time validation feedback as the user types
@@ -55,6 +70,9 @@ const markdownContent = `
 - validate: { validateFunction: (value) => value === "example" } - allows for custom validation logic by providing a function that returns a boolean.
 - min: { value: 1 } - validates that the input value is greater than or equal to a specified minimum value (typically used for numbers).
 - max: { value: 100 } - validates that the input value is less than or equal to a specified maximum value (typically used for numbers).
+
+**Zod**
+- If we use e.g Zod we might have more build in validation options
 
 *Optional*
 - Pass in message for customize ut { value: true, message, this field is required }
