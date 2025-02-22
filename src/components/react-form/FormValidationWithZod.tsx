@@ -46,10 +46,44 @@ export const FormValidationWithZod = () => {
 };
 
 const markdownContent = `
-- npm install @hookform/resolvers
+
+### Key Points. 
+By using Zod, you can create more complex validation schemas, handle custom logic, and provide better error handling and messaging while keeping the markup cleaner.
+
+Need to install resolver \`npm install @hookform/resolvers\`
+
+Example:
+Create a scheme
+\`\`\`
+const schema = z.object({
+  username: z.string().min(3, { message: "Username must be at least 3 characters long" }),
+  email: z.string().email({ message: "Invalid email address" }),
+});
+\`\`\`
+Add schema to the resolver.
+\`\`\`
+const {... } = useForm({resolver: zodResolver(schema), });
+\`\`\`
+
+### Examples of Zod Validation Rules Not Natively in React Hook Form**
+
+- **Custom Validation Logic**: Use .refine() for custom validation.
+- **Union Types**: Validate against multiple schemas with z.union().
+- **Intersection Types**: Combine schemas using z.intersection().
+- **Default Values**: Set defaults with .default().
+- **Transformations**: Transform values using .transform().
+- **Nullable and Optional Types**: Use .nullable() and .optional().
+- **Literal Types**: Match exact values with z.literal().
+- **Enum Validation**: Define enums with z.enum().
+- **Array Validation**: Validate arrays with specific types using z.array().
+- **Object Shape Validation**: Validate object shapes with z.object().
+- **Chaining Validation**: Chain rules with a fluent API style.
+- **Error Handling**: Get detailed error messages with schema.parse().
+
+### More
+
 - the schema can be inferred and used in ts - type FormData = z.infer<typeof schema>;
 - Keeps validation rules separate which helps for a cleaner markup and better readability.
 - Inject zod-schema into the resolver
-
-The resolver is a function that integrates external validation libraries with React Hook Form's validation mechanism. It allows you to use custom validation schemas (like those from libraries such as Zod, Yup, Joi, etc.) to validate form data seamlessly.
+- The resolver allows integration of external validation libraries such as Zod, Yup, Joi, etc.
 `;
