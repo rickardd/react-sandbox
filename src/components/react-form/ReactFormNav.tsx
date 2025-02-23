@@ -27,16 +27,16 @@ export const ReactFormNav = () => {
             <NavLink to="/react-form/conditional-validation">ToDo: Conditional Validation</NavLink>
           </li>
           <li>
-            <NavLink to="/react-form/ui-library-integration">ToDo: Integration with UI Libraries</NavLink>
+            <NavLink to="/react-form/ui-library-integration">Integration with UI Libraries</NavLink>
           </li>
           <li>
-            <NavLink to="/react-form/revalidation">ToDo: Revalidation:</NavLink>
+            <NavLink to="/react-form/controlled-vs-uncontrolled">ToDo: Controlled Vs Uncontrolled inputs</NavLink>
           </li>
           <li>
             <NavLink to="/react-form/default-values">ToDo: Default Values</NavLink>
           </li>
           <li>
-            <NavLink to="/react-form/asynchronous-validation">ToDo: Asynchronous Validation</NavLink>
+            <NavLink to="/react-form/asynchronous-validation">Asynchronous Validation</NavLink>
           </li>
 
           <Outlet />

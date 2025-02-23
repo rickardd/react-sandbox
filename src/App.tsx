@@ -85,6 +85,33 @@ const App = () => {
               <li>
                 <NavLink to="/">Docker</NavLink>
               </li>
+              <li>
+                <NavLink to="/">Headless CMS</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">CSS</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">HTML</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">FireBase</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">Node</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">SQL</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">JavaScript</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">Git</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">VsCode</NavLink>
+              </li>
             </ul>
           </nav>
         </header>
