@@ -39,11 +39,15 @@ npm install -D cypress
 - Performance - no extra rendering
 - Keep state logic on one place with store
 - No ts
-- React form
 - How to handle multiple stores
 - How to handle nested routs
-- Solid
-- Controlled vs uncontrolled form
+- EsLint
+- Vite
+- WebPack
+- chrome dev tools
+
+  - Debugging
+  - save css when updated in dev tools
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
