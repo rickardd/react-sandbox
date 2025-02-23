@@ -23,6 +23,8 @@ import "./App.scss";
 import "./layout.scss";
 import { SideEffectsRoutes } from "./components/side-effects/SideEffectsRoutes";
 import { SideEffectsNav } from "./components/side-effects/SideEffectsNav";
+import { ReactQueryRoutes } from "./components/react-query/ReactQueryRoutes";
+import { ReactQueryNav } from "./components/react-query/ReactQueryNav";
 
 const App = () => {
   return (
@@ -124,6 +126,7 @@ const App = () => {
               <Route path="test1" element={<p>Test 1</p>} />
               <Route path="test2" element={<p>Test 2</p>} />
             </Route>
+            <Route path="/react-query/*" element={<ReactQueryNav />} />
             <Route path="*" element={<p>Not found</p>} />
           </Routes>
         </nav>
@@ -140,7 +143,7 @@ const App = () => {
             <Route path="/react-useMemo-useCallback" element={<MemoAndCallbackHooks />} />
             <Route path="/use-context" element={<Context />} />
             <Route path="/zod" element={<p>Zod</p>} />
-            <Route path="/react-query" element={<PostList />} />
+            <Route path="/react-query/*" element={<ReactQueryRoutes />} />
             <Route path="/products" element={<Products />} />
             <Route path="/artists" element={<Artists />}>
               <Route path="" element={<SearchBar />} />
